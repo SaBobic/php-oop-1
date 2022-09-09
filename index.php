@@ -14,6 +14,19 @@ class Movie
         $this->release = $_release;
         $this->genre = $_genre;
     }
+
+    public function getGenreString()
+    {
+        $genre_string = '';
+        for($i = 0; $i < count($this->genre); $i++){
+            if($i === count($this->genre) - 1){
+                $genre_string .= "{$this->genre[$i]}";
+                break;
+            }
+            $genre_string .= "{$this->genre[$i]}, ";
+        }
+        return $genre_string;
+    }
 }
 
 $top_gun_maverick_overview = 'Dopo più di trent’anni di servizio nella Marina, il Tenente Pete “Maverick” Mitchell è proprio dove vorrebbe essere: un pilota coraggioso che può spingersi oltre ogni limite, cercando di schivare l’avanzamento di carriera che metterebbe un freno alla sua libertà. Quando viene ri-chiamato ad addestrare i migliori allievi Top Gun per una missione specializzata che nessuno al mondo ha mai portato a compimento, Maverick incontra il Tenente Bradley Bradshaw, nome in codice “Rooster”: è il figlio di Nick , il compianto “Goose.” Alle prese con un futuro incerto e con i fantasmi del passato, Maverick deve confrontarsi con le sue paure più profonde, fino ad una missione che richiederà il sacrificio ultimo di quelli che sceglieranno di parteciparvi.';
@@ -33,6 +46,5 @@ $luck = new Movie('Luck', $luck_overview, '05/08/2022', ['Animazione', 'Avventur
     <title>Movies</title>
 </head>
 <body>
-    
 </body>
 </html>
