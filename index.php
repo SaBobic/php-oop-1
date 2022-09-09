@@ -45,6 +45,31 @@ $luck = new Movie('Luck', $luck_overview, '05/08/2022', ['Animazione', 'Avventur
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies</title>
 </head>
+
 <body>
+    <header>
+        <h1>Movies</h1>
+    </header>
+    <main>
+        <article>
+            <h2><?= $top_gun_maverick->title ?></h2>
+            <div>
+                <span><?= $top_gun_maverick->getGenreString() ?> | </span>
+                <span><?= $top_gun_maverick->release ?></span>
+            </div>
+            <h3>Descrizione</h3>
+            <p><?= $top_gun_maverick->overview ?></p>
+        </article>
+        <hr>
+        <article>
+            <h2><?= $luck->title ?></h2>
+            <div>
+                <span><?= $luck->getGenreString() ?> | </span>
+                <span><?= $luck->release ?></span>
+            </div>
+            <h3>Descrizione</h3>
+            <p><?= $luck->overview ?></p>
+        </article>
+    </main>
 </body>
 </html>
